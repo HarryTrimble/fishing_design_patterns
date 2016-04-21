@@ -6,31 +6,28 @@
 
 {% block content %}
 
-<!-- expired licence -->
+<!-- valid licence -->
+{% if data.access_code=="321987" %}
 
-  <main id="content" role="main">
+<main id="content" role="main">
 
     {{formData | safe}}
 
     <div class="grid-row">
       <div class="column-two-thirds">
 
-        <div class="govuk-box-highlight" style="">
-          <h1 class="bold-large">Fishing licence</h1>
-          <p>
-            6242 6372 4961 0352<br><br>
-            <strong class="heading-medium">Expires in: 3 days </strong>
-          </p>
-        </div>
+      <h1 class="form-title heading-large">
+        Check contact details<br>
+      </h1>
 
-        <table class="check-your-answers">
+      <table class="check-your-answers">
 
       <thead>
         <tr>
           <th colspan="2">
-            <h2 class="heading-medium">
-              Licence details
-            </h2>
+            <h1 class="form-title heading-large">
+
+            </h1>
           </th>
           <th>
           </th>
@@ -40,10 +37,23 @@
       <tbody>
         <tr>
           <td>
-            Licence length
+            Name:
           </td>
           <td>
-            12 months<br>
+            Tom Riddle<br>
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              <span class="visuallyhidden"></span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Mobile number: 
+          </td>
+          <td>
+            07760816534<br>
           </td>
           <td class="change-answer">
             <a href="#">
@@ -53,10 +63,10 @@
         </tr>
         <tr>
           <td>
-            Amount to renew
+            Email: 
           </td>
           <td>
-            £27<br>
+            tomriddle@gmail.com<br>
           </td>
           <td class="change-answer">
             <a href="#">
@@ -66,23 +76,12 @@
         </tr>
         <tr>
           <td>
-            Fish you can catch
+            Address: 
           </td>
           <td>
-            Coarse fish, eels<br>
-          </td>
-          <td class="change-answer">
-            <a href="#">
-              <span class="visuallyhidden">Change</span>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Date of issue
-          </td>
-          <td>
-            22 April 2015<br>
+            15 Maple Drive<br>
+            Kendal<br>
+            LA9 5BN
           </td>
           <td class="change-answer">
             <a href="#">
@@ -93,16 +92,32 @@
       </tbody>
     </table>
 
-    <br>
-    <br>
-
-    <p>
-      <a class="button" href="/renew/update_details_yes_no" role="button">Continue</a>   
-    </p>
-
     </div>
   </div>
 
 </main>
+
+<!-- expired licence -->
+{% elif data.access_code=="" %}
+
+  <main id="content" role="main">
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+      <h1 class="form-title heading-large">
+        Code not recognised<br>
+      </h1>
+      
+      <br>
+      <p>If you cannot find your code access click here</p>
+
+     </div>
+    </div>
+
+  </main>
+
+{% endif %}  
+ 
 
 {% endblock %}

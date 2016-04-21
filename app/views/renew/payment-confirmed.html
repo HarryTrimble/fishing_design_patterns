@@ -1,32 +1,34 @@
-{% extends "layout_renew_licence.html" %}
+{% extends "layout.html" %}
 
 {% block page_title %}
-  Confirmation page example
+  choose-payment
 {% endblock %}
 
 {% block content %}
 
-{{formData | safe}}
-
-<!-- expired licence -->
-
   <main id="content" role="main">
+
+    {{formData | safe}}
 
     <div class="grid-row">
       <div class="column-two-thirds">
 
-      <h1 class="form-title heading-large">
-        Check licence details<br>
-      </h1>
+        <div class="govuk-box-highlight" style="">
+          <h1 class="bold-large">Fishing licence</h1>
+          <p>
+            6242 6372 4961 0352<br><br>
+            <strong class="heading-medium">Expires in: 3 days </strong>
+          </p>
+        </div>
 
         <table class="check-your-answers">
 
       <thead>
         <tr>
           <th colspan="2">
-            <h1 class="form-title heading-large">
-
-            </h1>
+            <h2 class="heading-medium">
+              Payment details
+            </h2>
           </th>
           <th>
           </th>
@@ -36,36 +38,49 @@
       <tbody>
         <tr>
           <td>
-            Licence length
+            Licence length:
           </td>
           <td>
             12 months<br>
           </td>
           <td class="change-answer">
             <a href="#">
-              Change<span class="visuallyhidden"></span>
+              <span class="visuallyhidden">Change</span>
             </a>
           </td>
         </tr>
         <tr>
           <td>
-            Fish you can catch
+            Amount paid:
+          </td>
+          <td>
+            £27<br>
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              <span class="visuallyhidden">Change</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Fish you can catch:
           </td>
           <td>
             Coarse fish, eels<br>
           </td>
           <td class="change-answer">
             <a href="#">
-              Change<span class="visuallyhidden">Change</span>
+              <span class="visuallyhidden">Change</span>
             </a>
           </td>
         </tr>
         <tr>
           <td>
-            Amount to pay
+            Date of issue:
           </td>
           <td>
-            £27<br>
+            23 April 2016<br>
           </td>
           <td class="change-answer">
             <a href="#">
@@ -80,12 +95,13 @@
     <br>
 
     <p>
-      <a class="button" href="/renew/pay_govuk" role="button">Continue to payment</a>   
+      <a class="button" href="/renew/update_details_yes_no" role="button">Continue</a>   
     </p>
 
     </div>
   </div>
 
 </main>
+
 
 {% endblock %}

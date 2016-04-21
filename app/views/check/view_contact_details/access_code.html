@@ -1,0 +1,43 @@
+{% extends "layout_check_licence.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <div class="grid-row">
+      <div class="column-two-thirds">
+
+  <form method="get" action="/check/view_contact_details/show_details" class="form">
+
+    {{formData | safe}}
+
+    <h1 class="form-title heading-large">
+      View contact details
+    </h1>
+
+    <!-- Fishing licence number -->
+    <div class="form-group">
+      <label class="form-label-bold" for="licence-number">
+        <br>
+        Officier number
+        <span class="form-hint">
+          For example, '321987'.
+        </span>
+      </label>
+      <input type="text" style="width: 25%;" class="form-control" id="access_code" name="access_code" type="number">
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Check">
+    </div>
+
+  </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

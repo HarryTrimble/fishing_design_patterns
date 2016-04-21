@@ -1,0 +1,35 @@
+{% extends "layout_renew_licence.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+{{formData | safe}}
+
+<!-- expired licence -->
+
+  <main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {{formData | safe}}
+
+        <h1 class="heading-large">
+          GOV.UK Pay
+        </h1>
+
+        <p>Pay government to go fishing using GOV.UK Pay</p>
+
+        <p>
+          <a class="button" href="/renew/payment-confirmation" role="button">continue</a>
+        </p>
+
+    </div>
+  </div>
+
+  </main>
+
+{% endblock %}

@@ -1,12 +1,10 @@
 {% extends "layout_renew_licence.html" %}
 
 {% block page_title %}
-  Confirmation page example
+  choose-payment
 {% endblock %}
 
 {% block content %}
-
-<!-- expired licence -->
 
   <main id="content" role="main">
 
@@ -16,12 +14,14 @@
       <div class="column-two-thirds">
 
         <div class="govuk-box-highlight" style="">
-          <h1 class="bold-large">Fishing licence</h1>
+          <h1 class="bold-large">Payment successful</h1>
           <p>
-            6242 6372 4961 0352<br><br>
-            <strong class="heading-medium">Expires in: 3 days </strong>
-          </p>
+          Your reference number is <br>
+          <strong class="heading-medium">HTJ2123F</strong>
+        </p>
         </div>
+
+        <p>We have sent you a confirmation email.</p>
 
         <table class="check-your-answers">
 
@@ -29,7 +29,7 @@
         <tr>
           <th colspan="2">
             <h2 class="heading-medium">
-              Licence details
+              Payment details
             </h2>
           </th>
           <th>
@@ -40,20 +40,7 @@
       <tbody>
         <tr>
           <td>
-            Licence length
-          </td>
-          <td>
-            12 months<br>
-          </td>
-          <td class="change-answer">
-            <a href="#">
-              <span class="visuallyhidden">Change</span>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Amount to renew
+            Amount paid:
           </td>
           <td>
             £27<br>
@@ -66,7 +53,33 @@
         </tr>
         <tr>
           <td>
-            Fish you can catch
+            Start date:
+          </td>
+          <td>
+            Today<br>
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              <span class="visuallyhidden">Change</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Licence length:
+          </td>
+          <td>
+            12 months<br>
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              <span class="visuallyhidden">Change</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Fish you can catch:
           </td>
           <td>
             Coarse fish, eels<br>
@@ -79,10 +92,10 @@
         </tr>
         <tr>
           <td>
-            Date of issue
+            Licence number:
           </td>
           <td>
-            22 April 2015<br>
+            6242 6372 4961 0351<br>
           </td>
           <td class="change-answer">
             <a href="#">
@@ -93,16 +106,10 @@
       </tbody>
     </table>
 
-    <br>
-    <br>
-
-    <p>
-      <a class="button" href="/renew/update_details_yes_no" role="button">Continue</a>   
-    </p>
-
     </div>
   </div>
 
 </main>
+
 
 {% endblock %}

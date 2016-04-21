@@ -1,0 +1,58 @@
+{% extends "layout_check_licence.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+{{formData | safe}}
+
+<!-- expired licence -->
+
+  <main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="get" action="/check/view_contact_details/access_code" class="form">
+
+      {{formData | safe}}
+
+        <h1 class="heading-large">
+          Are you an enforcement officer? 
+        </h1>
+
+        <br>
+
+        <fieldset>
+          <legend class="visuallyhidden">
+            Are you an enforcement officer? 
+          </legend>
+
+          <div class="form-group">
+            <label for="enforcement_officer" class="block-label">
+              <input type="radio" id="enforcement_officer-1" name="enforcement_officer" value="yes">
+              Yes
+            </label>
+
+            <label for="enforcement_officer-2" class="block-label">
+              <input type="radio" id="enforcement_officer-2" name="enforcement_officer" value="no">
+              No
+            </label>
+
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  </main>
+
+{% endblock %}
