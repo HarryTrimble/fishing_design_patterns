@@ -1,0 +1,54 @@
+{% extends "layout_check_licence.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <div class="grid-row">
+      <div class="column-two-thirds">
+
+  <form method="get" action="/check/result" class="form">
+
+    {{formData | safe}}
+
+    <h1 class="form-title heading-large">
+      Licence you want to check
+    </h1>
+
+    <!-- Fishing licence number -->
+    <div class="form-group">
+      <label class="form-label-bold" for="licence-number">
+        <br>
+        Licence number
+        <span class="form-hint">
+          For example, '6242637249610351'.
+        </span>
+      </label>
+      <input type="text" class="form-control" id="licence_number" name="licence_number" type="number">
+    </div>
+
+    <div class="form-group">
+      <details>
+        <summary><span class="summary">Help finding licence number</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>
+            Your fishing licence number is 18 digits long and can found in any email, text message or letter about your fishing licence. 
+          </p>
+        </div>
+      </details>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Check">
+    </div>
+
+  </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

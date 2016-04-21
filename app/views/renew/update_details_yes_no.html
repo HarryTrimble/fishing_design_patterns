@@ -1,0 +1,56 @@
+{% extends "layout_renew_licence.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+{{formData | safe}}
+
+<!-- expired licence -->
+
+  <main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="get" action="/renew/check_licence_details" class="form">
+
+      {{formData | safe}}
+
+        <h1 class="heading-large">
+          Have your contact details changed?
+        </h1>
+
+        <fieldset>
+          <legend class="visuallyhidden">
+            Have your contact details changed?
+          </legend>
+
+          <div class="form-group">
+            <label for="update_details_yes_no" class="block-label">
+              <input type="radio" id="update_details_yes_no-1" name="update_details_yes_no" value="yes">
+              Yes
+            </label>
+
+            <label for="update_details_yes_no-2" class="block-label">
+              <input type="radio" id="update_details_yes_no-2" name="update_details_yes_no" value="no">
+              No
+            </label>
+
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  </main>
+
+{% endblock %}

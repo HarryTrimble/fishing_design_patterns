@@ -1,0 +1,70 @@
+{% extends "layout_update_licence.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Update fishing licence
+      </h1>
+
+      <p>Use this service to:</p>
+
+      <ul class="list list-bullet">
+        <li>Check the contact details associated with your fishing licence</li>        
+        <li>Change the contact details associated with your fishing licence</li>
+        <li>Remove the contact details associated with your fishing licence</li>
+      </uL>
+
+      <p>Checking takes around 5 minutes.</p>
+
+      <p>
+        <a class="button button-start" href="/update_details/search" role="button">Start now</a>
+      </p>
+
+      <h2 class="heading-medium">Before you start</h2>
+
+      <p>You can also <a href="#">check by phone.</a></p>
+
+      <p>The online service is also available in <a href="#">Welsh (Cymraeg).</a></p>
+
+    </div>
+    <div class="column-third">
+
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-medium" id="subsection-title">Related links</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+            <li><a href="/check">Check fishing licence</a></li>
+            <li><a href="/renew">Renew fishing licence</a></li>
+            <li><a href="https://www.gov.uk/catch-return">Report catch return</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

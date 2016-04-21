@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">ALPHA</strong>
+      <span>This is a prototype – GDS's <a href="#">service patterns</a> team think through making.</span>
+    </p>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <br>
+
+      <!-- check fishing licence -->
+      <h2 class="heading-medium">Check fishing licence</h2>
+
+      <ul class="list list-bullet">
+    		<li><a href="/check">Start page</a></li>
+    		<li><a href="/check/search">Search for licence</a></li>
+    		<li><a href="/check/result">Results page</a></li>      	
+      </ul>
+
+      <!-- update fishing licence -->
+      <h2 class="heading-medium">Update fishing licence</h2>
+
+      <ul class="list list-bullet">
+        <li><a href="/update_details">Start page</a></li>
+        <li><a href="/update_details/search">Search for licence </a></li>
+        <li><a href="/update_details/result">Results page</a></li>
+        <li><a href="/update_details/access_code_yes_no">Do you have a code?</a></li>
+        <li><a href="/update_details/access_code">Enter access code</a></li>
+        <li><a href="/update_details/show_details">View contact details</a></li>
+        <li><a href="/update_details/show_details">Confirmation</a></li>
+      </ul>
+
+      <!-- renew fishing licence -->
+      <h2 class="heading-medium">Renew fishing licence</h2>
+
+      <ul class="list list-bullet">
+    		<li><a href="/renew">Start page</a></li>
+    		<li><a href="/renew/search">Search for licence</a></li>
+    		<li><a href="/renew/result">Results page</a></li>
+    		<li><a href="/renew/update_details_yes_no">Update contact details?</a></li>
+        <li><a href="/renew/check_licence_details">Check licence details</a></li>  
+        <li><a href="#">Pay</a></li>
+        <li><a href="#">Confirmation</a></li>   
+      </ul>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+

@@ -1,0 +1,130 @@
+{% extends "layout_renew_licence.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+<!-- valid licence -->
+{% if data.access_code=="654321" %}
+
+<main id="content" role="main">
+
+    {{formData | safe}}
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+      <h1 class="form-title heading-large">
+        Check contact details<br>
+      </h1>
+
+      <table class="check-your-answers">
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h1 class="form-title heading-large">
+
+            </h1>
+          </th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            Name:
+          </td>
+          <td>
+            Tom Riddle<br>
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              Change<span class="visuallyhidden"></span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Mobile number: 
+          </td>
+          <td>
+            07760816534<br>
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              Change<span class="visuallyhidden">Change</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Email: 
+          </td>
+          <td>
+            tomriddle@gmail.com<br>
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              Remove<span class="visuallyhidden">Change</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Address: 
+          </td>
+          <td>
+            15 Maple Drive<br>
+            Kendal<br>
+            LA9 5BN
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              Remove<span class="visuallyhidden">Change</span>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    <p>
+      <a class="button" href="/renew/update_details/confirmation" role="button">Confirm</a>   
+    </p>
+
+    </div>
+  </div>
+
+</main>
+
+<!-- expired licence -->
+{% elif data.access_code=="" %}
+
+  <main id="content" role="main">
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+      <h1 class="form-title heading-large">
+        Code not recognised<br>
+      </h1>
+      
+      <br>
+      <p>If you cannot find your access click here</p>
+
+     </div>
+    </div>
+
+  </main>
+
+{% endif %}  
+ 
+
+{% endblock %}

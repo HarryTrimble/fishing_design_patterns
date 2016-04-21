@@ -1,0 +1,108 @@
+{% extends "layout_renew_licence.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+<!-- expired licence -->
+
+  <main id="content" role="main">
+
+    {{formData | safe}}
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        <div class="govuk-box-highlight" style="background-color: #6F777B;">
+          <h1 class="bold-large">Fishing licence</h1>
+          <p>
+            6242 6372 4961 0352<br><br>
+            <strong class="heading-medium">Expires in: 3 days </strong>
+          </p>
+        </div>
+
+        <table class="check-your-answers">
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Licence details
+            </h2>
+          </th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            Licence length
+          </td>
+          <td>
+            12 months<br>
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              <span class="visuallyhidden">Change</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Amount to renew
+          </td>
+          <td>
+            £27<br>
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              <span class="visuallyhidden">Change</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Fish you can catch
+          </td>
+          <td>
+            Coarse fish, eels<br>
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              <span class="visuallyhidden">Change</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Date of issue
+          </td>
+          <td>
+            22 April 2015<br>
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              <span class="visuallyhidden">Change</span>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    <p>
+      <a class="button" href="/renew/update_details_yes_no" role="button">Continue</a>   
+    </p>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

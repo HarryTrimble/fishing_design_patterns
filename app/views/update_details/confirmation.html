@@ -1,0 +1,104 @@
+{% extends "layout_update_licence.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+<!-- expired licence -->
+
+  <main id="content" role="main">
+
+    {{formData | safe}}
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        <div class="govuk-box-highlight" style="">
+        <h1 class="bold-large">Licence updated</h1>
+        <p>
+          Your reference number is <br>
+          <strong class="heading-medium">HDJ2123F</strong>
+        </p>
+        </div>
+
+      <table class="check-your-answers">
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+            Contact details
+            </h2>
+          </th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            Name:
+          </td>
+          <td>
+            Tom Riddle<br>
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              <span class="visuallyhidden"></span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Mobile number: 
+          </td>
+          <td>
+            07760816534<br>
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              <span class="visuallyhidden">Change</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Email: 
+          </td>
+          <td>
+            tomriddle@gmail.com<br>
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              <span class="visuallyhidden">Change</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Address: 
+          </td>
+          <td>
+            15 Maple Drive<br>
+            Kendal<br>
+            LA9 5BN
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              <span class="visuallyhidden">Change</span>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
