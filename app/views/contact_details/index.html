@@ -1,0 +1,106 @@
+{% extends "layout_buy_licence.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+{{formData | safe}}
+
+<!-- expired licence -->
+
+  <main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="get" action="#" class="form">
+
+      {{formData | safe}}
+
+        <h1 class="heading-large">
+          How would you like to be contacted?
+        </h1>
+
+        <p class="lede">Your contact details will only be used to send you notifications, confirmations and your licence.</p>
+
+        <fieldset>
+            <!-- Email -->
+           <label class="block-label" for="radio-1" data-target="contact-by-email">
+              <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+              Email
+            </label>
+            <!-- Hidden input -->
+            <div class="panel-border-narrow panel js-hidden" id="contact-by-email">
+              <label for="nationality_other_countries" class="form-label-bold">
+                Email address
+              </label>
+              <input class="form-control" type="text" id="email-input">
+            </div>
+            <!-- Text message -->
+            <label class="block-label" for="radio-2" data-target="contact-by-text">
+              <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+              Text message (text only)
+            </label>
+            <!-- Hidden input -->
+            <div class="panel-border-narrow panel js-hidden" id="contact-by-text">
+              <label for="nationality_other_countries" class="form-label-bold">
+                Mobile phone number
+              </label>
+              <input class="form-control" type="text" id="email-input">
+            </div>
+            <!-- Phone -->
+            <label class="block-label" for="radio-2" data-target="contact-by-phone">
+              <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+              Phone (voice only)
+            </label>
+            <!-- Hidden input -->
+            <div class="panel-border-narrow panel js-hidden" id="contact-by-phone">
+              <label for="nationality_other_countries" class="form-label-bold">
+                Phone number
+              </label>
+              <input class="form-control" type="text" id="email-input">
+            </div>
+            <p class="form-block">or</p>
+            <!-- Post -->
+            <label class="block-label" for="radio-3" data-target="contact-by-post">
+              <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+              Post
+            </label>
+            <!-- Hidden input -->
+            <div class="panel-border-narrow panel js-hidden" id="contact-by-post">
+              
+              <div class="form-group">
+                <label class="form-label-bold" for="full-name">House number or name, building or street</label>
+                <input type="text" class="form-control" id="full-name">
+              </div>
+
+              <!-- Town or city -->
+              <div class="form-group">
+                <label class="form-label-bold" for="full-name">Town or city</label>
+                <input type="text" class="form-control" id="full-name">
+              </div>
+
+              <!-- postcode -->
+              <div class="form-group">
+                <label class="form-label-bold" for="full-name">Postcode</label>
+                <input type="text" class="form-control" id="full-name">
+              </div>
+
+            </div>
+        </fieldset>
+
+        <br>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  </main>
+
+{% endblock %}

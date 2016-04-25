@@ -40,6 +40,52 @@ router.get('/examples/template-data', function (req, res) {
 
 // Branching
 
+// resend access code for Update fishing licence
+router.get('/update_details/access_code', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?update_details_yes_no=1)
+  var has_access_code = req.query.has_access_code;
+  var access_code = req.query.access_code;
+
+  if (has_access_code == "no" && access_code==undefined){
+
+    // if users DOES using has_access_code
+    res.redirect("/update_details/resend_access_code" + res.locals.formQuery);
+
+  } else {
+
+    // if users is DOES has access code
+    res.render('update_details/access_code');
+
+  }
+
+});
+
+// resend access code for Renew fishing licence
+router.get('/renew/update_details/access_code', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?update_details_yes_no=1)
+  var has_access_code = req.query.has_access_code;
+  var access_code = req.query.access_code;
+
+  if (has_access_code == "no" && access_code==undefined){
+
+    // if users DOES using has_access_code
+    res.redirect("/renew/update_details/resend_access_code" + res.locals.formQuery);
+
+  } else {
+
+    // if users is DOES has access code
+    res.render('/renew/update_details/access_code');
+
+  }
+
+});
+
 // update details when renewing fishing licence 
 
 router.get('/renew/check_licence_details', function (req, res) {
@@ -63,6 +109,8 @@ router.get('/renew/check_licence_details', function (req, res) {
   }
 
 });
+
+
 
 // Branching
 

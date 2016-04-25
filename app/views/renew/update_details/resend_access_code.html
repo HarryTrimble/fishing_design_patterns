@@ -1,0 +1,47 @@
+{% extends "layout_update_licence.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <div class="grid-row">
+      <div class="column-two-thirds">
+
+  <form method="get" action="/update_details/show_details" class="form">
+
+    {{formData | safe}}
+
+    <h1 class="form-title heading-large">
+      A new access code has been emailed to you
+    </h1>
+
+    <br>
+
+    <p class="">The code would have been sent to the email address you gave whe you bought your licence</p>
+
+    <!-- Fishing licence number -->
+    <div class="form-group">
+      <label class="form-label-bold" for="licence-number">
+        <br>
+        Access code
+        <span class="form-hint">
+          For example, '654321'.
+        </span>
+      </label>
+      <input type="text" style="width: 25%;" class="form-control" id="access_code" name="access_code" type="number">
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Check">
+    </div>
+
+  </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}
